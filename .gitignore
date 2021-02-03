@@ -1,0 +1,8 @@
+Pipfile
+
+.pytest_cache
+.coverage
+clickhouse_driver_decorators.egg-info
+
+Dockerfile
+Makefile
