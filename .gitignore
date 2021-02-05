@@ -6,3 +6,7 @@ clickhouse_driver_decorators.egg-info
 
 Dockerfile
 Makefile
+
+
+build
+dist
