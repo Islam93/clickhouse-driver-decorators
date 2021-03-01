@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name='clickhouse-driver-decorators',
-    version='0.1.0',
+    version='0.1.1',
     description='Bunch of decorators to decorate clickhouse-driver\'s execute method',
     author='Islam Israfilov (Islam93)',
     author_email='israfilov93@gmail.com',
