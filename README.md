@@ -4,7 +4,7 @@
 ![python](https://img.shields.io/badge/python-%3E%3D3.5-blue)
 ![coverage](https://img.shields.io/badge/coverage-100%25-green)
 
-Bunch of decorators to decorate clickhouse-driver's `execute` method
+Bunch of decorators to decorate [clickhouse-driver's](https://github.com/mymarilyn/clickhouse-driver) `execute` method
 
 
 #### Available decorators:
@@ -47,7 +47,7 @@ class A:
     @convert_timestamp_to_datetime(columns_to_convert={'now_ts': 'Europe/Moscow'})
     @convert_string_to_datetime(date_format='%Y-%m-%d %H:%M:%S', columns_to_convert={'now_str': 'Europe/Moscow'})
     def __decorated_execute(self, query: str):
-        return self.__client.execute(query)
+        return self.__client.execute(query, with_column_types=True)
 
 
 class B:
@@ -59,5 +59,5 @@ class B:
         
     @transform_to_pandas_dataframe()
     def __decorated_execute(self, query: str):
-        return self.__client.execute(query)
+        return self.__client.execute(query, with_column_types=True)
 ```
